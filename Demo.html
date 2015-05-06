@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #stage{
+            -webkit-perspective: 1000px;
+            -webkit-perspective-origin: 50% 50%;
+        }
+        .box{
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            left: 300px;
+            top:300px;
+            list-style: none;
+            -webkit-transform-style: preserve-3d;
+        }
+        .box li{
+            height: 200px;
+            width: 200px;
+            font-size: 30px;
+            color: white;
+            line-height: 200px;
+            text-align: center;
+        }
+        .box li:nth-child(1){
+            background-color: rgba(0, 0, 255, 0.80);;
+            -webkit-transform: rotateX(0deg);
+        }
+        .box li:nth-child(2){
+            background-color: rgba(255, 0, 0, 0.80);
+            -webkit-transform: rotateY(90deg) translateY(-200px) translateX(200px);
+            -webkit-transform-origin: 200px 0px 0px;
+
+        }
+        .box li:nth-child(3){
+            background-color: rgba(188, 255, 145, 0.80);
+            -webkit-transform: rotateY(0deg) translateY(-400px) translateX(0px) translateZ(-200px);
+            -webkit-transform-origin: 200px 0px 0px;
+
+        }
+        .box li:nth-child(4){
+            background-color: rgba(67, 183, 255, 0.80);
+            -webkit-transform: rotateY(90deg) translateY(-600px) translateX(200px) translateZ(-200px);
+            -webkit-transform-origin: 200px 0px 0px;
+        }
+        .box li:nth-child(5){
+            background-color: rgba(255, 105, 206, 0.80);
+            -webkit-transform: rotateX(90deg) translateY(-1000px) translateX(0px) translateZ(0px);
+            -webkit-transform-origin: 0px -800px 0px;
+        }
+        .box li:nth-child(6){
+            background-color: rgba(255, 252, 66, 0.80);
+            -webkit-transform: rotateX(90deg) translateY(-1200px) translateX(0px) translateZ(-200px);
+            -webkit-transform-origin: 0px -1000px 0px;
+        }
+    </style>
+</head>
+<body>
+<div id="stage">
+    <ul class="box">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+</div>
+
+</body>
+</html>
